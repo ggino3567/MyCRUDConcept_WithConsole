@@ -4,6 +4,18 @@
 //單純想了解如何簡單的使用class實作並且try看看
 class Program
 {
+    static void ShowMenu()
+    {
+        Console.WriteLine("==== SimpleCRUD ====");
+        Console.WriteLine("1. 添加");
+        Console.WriteLine("2. 讀取");
+        Console.WriteLine("3. 更新");
+        Console.WriteLine("4. 刪除");
+        Console.WriteLine("5. 退出");
+        Console.WriteLine("====================");
+        Console.WriteLine("\n請選擇執行動作 : ");
+    }
+
     static void Main(string[] args)
     {
         //2025/8/24 : 考慮後面加上do-while 然後再用選項去跟隨if-else或switch來不斷執行CRUD
@@ -13,14 +25,7 @@ class Program
         
         do
         {
-            Console.WriteLine("==== SimpleCRUD ====");
-            Console.WriteLine("1. 添加");
-            Console.WriteLine("2. 讀取");
-            Console.WriteLine("3. 更新");
-            Console.WriteLine("4. 刪除");
-            Console.WriteLine("5. 退出");
-            Console.WriteLine("====================");
-            Console.WriteLine("\n請選擇執行動作 : ");
+            ShowMenu();
             int operatorInput = int.Parse(Console.ReadLine());
 
             if (operatorInput == 5)
